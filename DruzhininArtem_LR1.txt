@@ -1,8 +1,10 @@
 Дружинин Артем ПИ-91.
 Программирование - III.
 Отчет по лабораторной №1.
-Описание действий до пунка 7 попунктно:
+Описание действий:
+
 1) Сначала я перешел на сайт https://gitforwindows.org и скачал с него git и установил его
+
 2) Затем с помощью команд
 git config --global user.name Atemyn
 git config --global user.email atemyn@mail.ru
@@ -18,16 +20,19 @@ cd /d D:\Git\Lab_1
 mkdir Lab_1_Report
 Затем я перешел в него
 cd Lab_1_Report
+
 4) В данном каталоге я инициализироал git:
 git init
+
 5) После этого создал в нем данный txt файл следующим образом:
 NUL> DruzhininArtmen_LR1.txt
 и проиндексироал его:
 git add DruzhininArtmen_LR1.txt
+
 6) Потом я создал первый коммит:
 git commit -m "First commit"
-11)
 
+11)
 Для игнорирования файлов, я создал собственно файлы, которые буду игнорировать, а именно:
 файл temporary.tmp и папку log, содержащую файлы "chtoto.txt" и "chtoto1.txt"
 NUL> temporary.tmp
@@ -60,3 +65,28 @@ git rm --cached temporary.tmp
 А для удаления файла из всех коммитов можно воспользоаться командой 
 git filter-branch --index-filter "git rm --cached --ignore-unmatch D:\Git\Lab_1\Lab_1_Report\temporary.tmp" --prune-empty HEAD
 
+Сначала я создал файл moveThis.txt, который буду перемещать и директорию moveHere, в которую буду перемещать этот файл
+и закоммитил их. Для перемещения я воспользовался командой
+git mv moveThis.txt moveHere/
+
+12)
+Для просмотра истории коммитов можно просто воспользоваться командой git log и данные о коммитах выедутся в полном формате:
+commit 24830e18005806e6f6bec7f9936bdddef7233b09
+Author: Atemyn <atemyn@mail.ru>
+Date:   Fri Sep 4 15:33:15 2020 +0300
+
+    Second Commit
+
+commit 140f9c646cc2969759db65b577db2ca8c31d7c67
+Author: Atemyn <atemyn@mail.ru>
+Date:   Fri Sep 4 14:56:49 2020 +0300
+
+    First Commit
+Также можно воспользоваться, например, командой git log --oneline
+и тогда данные выведутся построчно, хэш будет укорочен. а данные об авторе и дате не будут представлены.
+В добавление к этом можно пользоваться командами git log --author=<your name> для вывода коммитов определенного автора, командами
+git log --since='5 minutes ago'
+git log --until='5 minutes ago'
+для вывода данных в зависимости от указанного времени, а также командой git log --max-count=2 для вывода определенного числа записей.
+
+13)
