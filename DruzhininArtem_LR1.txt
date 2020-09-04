@@ -1,3 +1,29 @@
 Дружинин Артем ПИ-91.
 Программирование - III.
 Отчет по лабораторной №1.
+Описание действий до пунка 7 попунктно:
+1) Сначала я перешел на сайт https://gitforwindows.org и скачал с него git и установил его
+2) Затем с помощью команд
+git config --global user.name Atemyn
+git config --global user.email atemyn@mail.ru
+я установил свое имя и электронную почту.
+После этого я настроил перевод строк текстовых файлов с помощью следующих строк:
+git config --global core.autocrlf true
+git config --global core.safecrlf warn
+Чтобы избежать нечитаемых строк я ввел команду
+git config --global core.quotepath off 
+3) Чтобы создать каталог мне необходимо было перейти в текущий каталог:
+cd /d D:\Git\Lab_1
+Создание каталога я произвел командой
+mkdir Lab_1_Report
+Затем я перешел в него
+cd Lab_1_Report
+4) В данном каталоге я инициализироал git:
+git init
+5) После этого создал в нем данный txt файл следующим образом:
+NUL> DruzhininArtmen_LR1.txt
+и проиндексироал его:
+git add DruzhininArtmen_LR1.txt
+6) Потом я создал первый коммит:
+git commit -m "First commit"
+
